@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Редагування інформації про музичний альбом. Інформація про функціональні можливості та управління контентом.">
+  <title>Редагування альбому – Музичні альбоми</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <header>
+    <nav aria-label="Основна навігація">
+        <ul>
+            <li><a href="index.html">Каталог</a></li>
+            <li><a href="about.html" >Про проєкт</a></li>
+        </ul>
+    </nav>
+    <nav aria-label="Хлібні крихти">
+        <ol>
+            <li><a href="admin.html">Адміністрування</a></li>
+            <li aria-current="page">Редагування: The Dark Side of the Moon</li>
+        </ol>
+    </nav>
+    </header>
+    <main>
+        <h1>Редагування альбому: The Dark Side of the Moon</h1>
+        <form id="album-edit-form" method="get">
+            <input type="hidden" name="id" value="1">
+            <fieldset>
+                <legend>Основні дані</legend>
+            <label for="title">Назва альбому:</label>
+            <input type="text" id="title" name="title" value="The Dark Side of the Moon" required minlength="1" maxlength="100">
+
+            <label for="artist">Виконавець:</label>
+            <input type="text" id="artist" name="artist" value="Pink Floyd" required maxlength="80" list="artist-list">
+            <datalist id="artist-list">
+                <option value="Pink Floyd">
+                <option value="Radiohead">
+                <option value="Daft Punk">
+                <option value="Massive Attack">
+                <option value="Kendrick Lamar">
+                <option value="Miles Davis">
+            </datalist>
+
+            <label for="albumCode">Код альбому:</label>
+            <input type="text" id="albumCode" name="albumCode" value="DSM-001" required pattern="[A-Z]{3}-[0-9]{3}" aria-describedby="albumCode-help">
+            <div id="albumCode-help">
+                <small>Формат: ТРИ ВЕЛИКІ ЛАТИНСЬКІ ЛІТЕРИ-ТРИ ЦИФРИ (наприклад, ABC-123)</small>
+            </div>
+            
+            <label for="genre">Жанр:</label>
+            <select required id="genre" name="genre">
+                <option value="">Виберіть жанр</option>
+                <option value="rock" selected>Рок</option>
+                <option value="electronic">Електроніка</option>
+                <option value="hip-hop">Хіп-хоп</option>
+                <option value="jazz">Джаз</option>
+            </select>
+
+            <label for="releaseYear">Рік випуску:</label>
+            <input type="number" id="releaseYear" name="releaseYear" value="1973" min="1900" max="2026" step="1" required aria-describedby="releaseYear-help">
+            <div id="releaseYear-help">
+                <small>Введіть рік випуску (1900-2026)</small>
+            </div>
+
+            <label for="trackCount">Кількість треків:</label>
+            <input type="number" id="trackCount" name="trackCount" value="10" min="1" max="100" step="1" required>
+
+            <label for="keyTrack">Ключовий трек:</label>
+            <input type="text" id="keyTrack" name="keyTrack" value="Time" maxlength="100">
+
+            <label for="addedAt">Дата додавання:</label>
+            <input type="date" id="addedAt" name="addedAt" value="2026-10-01" min="2024-01-01" max="2027-12-31" aria-describedby="addedAt-help">
+            <div id="addedAt-help">
+                <small>Виберіть дату додавання (від 2024-01-01 до 2027-12-31)</small>
+            </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Обкладинка, опис і стан</legend>
+                <label for="coverFile">Обкладинка:</label>
+            <input type="file" id="coverFile" name="coverFile" accept=".jpg, .jpeg, .png, .webp, .avif" aria-describedby="coverFile-help">
+            <div id="coverFile-help">
+                <small>Дозволені формати: .jpg, .jpeg, .png, .webp, .avif</small>
+            </div>
+
+            <label for="description">Опис альбому:</label>
+            <textarea id="description" name="description" maxlength="500">Концептуальний альбом про тиск, час, гроші та божевілля. Треки перетікають один в одного без пауз, тому слухати його краще цілком.</textarea>
+
+            <label for="isOriginal">Оригінальне видання:</label>
+            <input type="checkbox" id="isOriginal" name="isOriginal" checked>
+            </fieldset>
+
+            <button type="submit">Зберегти зміни</button>
+            <button type="reset">Скасувати зміни</button>
+            <a href="admin.html">Повернутися до адміністрування</a>
+        </form>
+    
+    </main>
+    <footer>
+        <section id="contact">
+            <h2>Контакти</h2>
+            <ul>
+            <li>Зв'яжіться з нами за адресою: example@email.com</li>
+            <li>Телефон: +380 123 456 789</li>
+            </ul>
+            <section id="messenger">
+            <h3>Месенджери:</h3>
+            <ul>
+            <li>Telegram (@example123 або по номеру телефону)</li>
+            <li>WhatsApp (+380 123 456 789)</li>
+            <li>Viber (+380 123 456 789)</li>
+            <li>Instagram (<a href="https://www.instagram.com/example123inst" target="_blank" rel="noopener noreferrer">example123inst</a>)</li>
+            <li>Facebook (<a href="https://www.facebook.com/example123fsb" target="_blank" rel="noopener noreferrer">example123fsb</a>)</li>
+            </ul>
+            </section>
+        </section>
+        <p>
+            <small>© 2026 Музичні альбоми. Сторінка сайту-каталогу.</small>
+        </p>
+    </footer>
+</body>
+</html>

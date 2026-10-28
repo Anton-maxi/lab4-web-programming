@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><title>Музичні альбоми</title>
+<rect width="64" height="64" rx="14" fill="#16130f"/>
+<g fill="#f1e9d8">
+<rect x="10" y="26" width="6" height="12" rx="3"/>
+<rect x="19.5" y="16" width="6" height="32" rx="3"/>
+<rect x="29" y="9" width="6" height="46" rx="3" fill="#e4572e"/>
+<rect x="38.5" y="19" width="6" height="26" rx="3"/>
+<rect x="48" y="27" width="6" height="10" rx="3"/>
+</g>
+</svg>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Музичні альбоми. Каталог музики з можливістю пошуку та сортування.">
+  <title>Каталог – Музичні альбоми</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <header>
+    <nav aria-label="Основна навігація">
+        <ul>
+            <li ><a href="index.html" aria-current="page">Каталог</a></li>
+            <li><a href="about.html">Про проєкт</a></li>
+        </ul>
+    </nav>
+    <h1>Каталог музичних альбомів</h1>
+    <p>Каталог музики з можливістю пошуку та сортування.</p>
+    <nav aria-label="Навігація по розділах">
+        <ul>
+            <li><a href="#search">Пошук</a></li>
+            <li><a href="#filter">Фільтр</a></li>
+            <li><a href="#sort">Сортування</a></li>
+            <li><a href="#list">Список альбомів</a></li>
+            <li><a href="#contact">Контакти</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <section id="search_and_filter" aria-label="Пошук і фільтри">
+            <h2>Фільтрація</h2>
+            <form action="filtration.html" method="get">
+                <label id="search" for="query">Пошуковий запит:</label>
+                <input type="search" id="query" name="query" placeholder="Введіть назву альбому або артиста">
+                <label id="filter" for="genre">Жанр:</label>
+                <select id="genre" name="genre">
+                    <option value="">Всі жанри</option>
+                    <option value="rock">Рок</option>
+                    <option value="electronic">Електроніка</option>
+                    <option value="hip-hop">Хіп-хоп</option>
+                    <option value="jazz">Джаз</option>
+                </select>
+                <label id="sort" for="sort-by">Сортувати за:</label>
+                <select id="sort-by" name="sort-by">
+                    <option value="">Без сортування</option>
+                    <option value="title-asc">Назва (А-Я)</option>
+                    <option value="title-desc">Назва (Я-А)</option>
+                    <option value="year-asc">Рік (зростання)</option>
+                    <option value="year-desc">Рік (спадання)</option>
+                </select>
+            <button type="submit">Пошук</button>
+            </form>
+        </section>
+        <section id="list">
+            <h2>Список альбомів</h2>
+            <ul>
+                <li>
+                    <article>
+                        <h3><a href="details.html">The Dark Side of the Moon</a></h3>
+                        <img srcset="images/dark-side-of-the-moon.jpg 1500w, images/dark-side-of-the-moon-300.jpg 300w" sizes="(max-width: 600px) 100vw, 300px" fetchpriority="high" src="images/dark-side-of-the-moon.jpg" alt="The Dark Side of the Moon: Скляна призма на чорному тлі розкладає тонкий білий промінь світла на веселку.">
+                        <p>Виконавець: Pink Floyd</p>
+                        <p>Рік випуску: <time datetime="1973">1973</time></p>
+                        <p>Жанр: Рок</p>
+                        <p>Треків: <data value="10">10</data></p>
+                        <p>Ключовий трек: Time</p>
+                        <p>Опис: Концептуальний альбом про тиск, час, гроші та божевілля. Треки перетікають один в одного без пауз, тому слухати його краще цілком.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3><a href="details.html">OK Computer</a></h3>
+                        <img srcset="images/ok-computer-300.jpg 300w, images/ok-computer.jpg 730w" sizes="(max-width: 600px) 100vw, 300px" loading="lazy" src="images/ok-computer.jpg" alt="OK Computer: Абстрактний колаж у холодних світло-блакитних і білих тонах: схематичні фігурки, дороги й вигадливі символи, у верхньому лівому куті напис «OK Computer».">
+                        <p>Виконавець: Radiohead</p>
+                        <p>Рік випуску: <time datetime="1997">1997</time></p>
+                        <p>Жанр: Рок</p>
+                        <p> Треків: <data value="12">12</data></p>
+                        <p>Ключовий трек: Paranoid Android</p>
+                        <p>Опис: Гітарний рок, який дивиться на техніку з тривогою. Тут вже немає простих куплетів: пісні розвалюються й збираються заново прямо посеред треку.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3><a href="details.html">Random Access Memories</a></h3>
+                        <img srcset="images/random-access-memories-300.jpg 300w, images/random-access-memories.jpg 1000w" sizes="(max-width: 600px) 100vw, 300px" loading="lazy" src="images/random-access-memories.jpg" alt="Random Access Memories: На чорному тлі шолом робота, ліва половина срібна, права золота, зверху рукописний напис з назвою альбому.">
+                        <p>Виконавець: Daft Punk</p>
+                        <p>Рік випуску: <time datetime="2013">2013</time></p>
+                        <p>Жанр: Електроніка</p>
+                        <p> Треків: <data value="13">13</data></p>
+                        <p>Ключовий трек: Get Lucky</p>
+                        <p>Опис: Останній альбом дуету. Замість семплів і комп'ютерів вони запросили живих музикантів і записали диско та фанк майже по-старому.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3><a href="details.html">Mezzanine</a></h3>
+                        <img srcset="images/mezzanine-300.jpg 300w, images/mezzanine.jpg 640w" sizes="(max-width: 600px) 100vw, 300px" loading="lazy" src="images/mezzanine.jpg" alt="Mezzanine: Чорний силует великої комахи на білому тлі, зліва напис «Massive Attack Mezzanine».">
+                        <p>Виконавець: Massive Attack</p>
+                        <p>Рік випуску: <time datetime="1998">1998</time></p>
+                        <p>Жанр: Електроніка</p>
+                        <p> Треків: <data value="11">11</data></p>
+                        <p>Ключовий трек: Teardrop</p>
+                        <p>Опис: Темний і повільний альбом з Брістоля, де бас і ритм-машина задають настрій, а вокал ніби долинає з сусідньої кімнати.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3><a href="details.html">To Pimp a Butterfly</a></h3>
+                        <img srcset="images/to-pimp-a-butterfly-300.jpg 300w, images/to-pimp-a-butterfly.jpg 874w" sizes="(max-width: 600px) 100vw, 300px" loading="lazy" src="images/to-pimp-a-butterfly.jpg" alt="To Pimp a Butterfly: Група чоловіків на галявині перед Білим домом, у руках у них гроші, угорі рожевий напис з назвою альбому.">
+                        <p>Виконавець: Kendrick Lamar</p>
+                        <p>Рік випуску: <time datetime="2015">2015</time></p>
+                        <p>Жанр: Хіп-хоп</p>
+                        <p> Треків: <data value="16">16</data></p>
+                        <p>Ключовий трек: Alright</p>
+                        <p>Опис: Хіп-хоп, у якому звучать джаз, фанк і поезія. Альбом про расу, славу і провину, зібраний як одна довга історія.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h3><a href="details.html">Kind of Blue</a></h3>
+                        <img srcset="images/kind-of-blue-300.jpg 300w, images/kind-of-blue.jpg 474w" sizes="(max-width: 600px) 100vw, 300px" loading="lazy" src="images/kind-of-blue.jpg" alt="Kind of Blue: Чоловік у темному костюмі грає на трубі, угорі напис «Miles Davis Kind of Blue» і список музикантів.">
+                        <p>Виконавець: Miles Davis</p>
+                        <p>Рік випуску: <time datetime="1959">1959</time></p>
+                        <p>Жанр: Джаз</p>
+                        <p> Треків: <data value="5">5</data></p>
+                        <p>Ключовий трек: So What</p>
+                        <p>Опис: П'ять треків, записаних майже без репетицій і дублів. Найпродаваніша джазова платівка, яка досі лишається точкою входу в жанр.</p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <section id="contact">
+            <h2>Контакти</h2>
+            <ul>
+            <li>Зв'яжіться з нами за адресою: example@email.com</li>
+            <li>Телефон: +380 123 456 789</li>
+            </ul>
+            <section id="messenger">
+            <h3>Месенджери:</h3>
+            <ul>
+            <li>Telegram (@example123 або по номеру телефону)</li>
+            <li>WhatsApp (+380 123 456 789)</li>
+            <li>Viber (+380 123 456 789)</li>
+            <li>Instagram (<a href="https://www.instagram.com/example123inst" target="_blank" rel="noopener noreferrer">example123inst</a>)</li>
+            <li>Facebook (<a href="https://www.facebook.com/example123fsb" target="_blank" rel="noopener noreferrer">example123fsb</a>)</li>
+            </ul>
+            </section>
+        </section>
+        <p>
+            <small>© 2026 Музичні альбоми. Сторінка сайту-каталогу.</small>
+        </p>
+    </footer>
+</body>
+
+</html>

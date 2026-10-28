@@ -132,6 +132,75 @@
                     </tbody>
                 </table>
             </section>
+            <section aria-labelledby="review-title">
+                <h2 id="review-title">Відгук</h2>
+                <form id="review-form" method="get">
+                    <label for="reviewerName">Ім'я:</label>
+                    <input type="text" id="reviewerName" name="reviewerName" autocomplete="name">
+
+                    <label for="email">Електронна пошта:</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-help">
+                    <div id="phone-help">
+                        <small>Введіть номер телефону формату +380501112233 (необов'язкове)</small>
+                    </div>
+
+                    <label for="favoriteTrack">Улюблений трек:</label>
+                    <select id="favoriteTrack" name="favoriteTrack" required>
+                        <option value="">Виберіть трек</option>
+                        <option value="1">Speak to Me</option>
+                        <option value="2">Breathe (In the Air)</option>
+                        <option value="3">On the Run</option>
+                        <option value="4">Time</option>
+                        <option value="5">The Great Gig in the Sky</option>
+                        <option value="6">Money</option>
+                        <option value="7">Us and Them</option>
+                        <option value="8">Any Colour You Like</option>
+                        <option value="9">Brain Damage</option>
+                        <option value="10">Eclipse</option>
+                    </select>
+
+                    <label for="listenedOn">Де слухали: </label>
+                    <input type="text" id="listenedOn" name="listenedOn" list="listenedOn-list">
+                    <datalist id="listenedOn-list">
+                        <option value="Spotify">
+                        <option value="Apple Music">
+                        <option value="YouTube">
+                        <option value="CD">
+                        <option value="Vinyl">
+                    </datalist>
+
+                    <label for="soundRating">Оцінка звучання:</label>
+                    <input type="range" id="soundRating" name="soundRating" min="0" max="10" step="1" aria-describedby="soundRating-help">
+                    <div id="soundRating-help">
+                        <small>Виберіть оцінку звучання (0-10). 0 найгірше, 10 найкраще</small>
+                    </div>
+
+                    <fieldset>
+                        <legend>Оцінка альбому</legend>
+                        <label><input type="radio" name="rating" value="1" required> 1</label>
+                        <label><input type="radio" name="rating" value="2"> 2</label>
+                        <label><input type="radio" name="rating" value="3"> 3</label>
+                        <label><input type="radio" name="rating" value="4"> 4</label>
+                        <label><input type="radio" name="rating" value="5"> 5</label>
+                    </fieldset>
+
+                    <label for="comment">Коментар:</label>
+                    <textarea id="comment" name="comment" maxlength="500" minlength="10" aria-describedby="comment-help"></textarea>
+                    <div id="comment-help">
+                        <small>Введіть ваш коментар (від 10 до 500 символів) необов'язково</small>
+                    </div>
+
+                    <label for="agreement">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        Згода з правилами публікації
+                    </label>
+
+                    <button type="submit">Надіслати відгук</button>
+                </form>
+            </section>
             <p><a href="index.html">Повернутися до каталогу альбомів</a></p>
     </main>
     <footer>

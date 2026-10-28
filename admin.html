@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Адміністрування каталогу музичних альбомів. Інформація про функціональні можливості та управління контентом.">
+  <title>Адміністрування – Музичні альбоми</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <header>
+    <nav aria-label="Основна навігація">
+        <ul>
+            <li><a href="index.html">Каталог</a></li>
+            <li><a href="about.html" >Про проєкт</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+        <h1>Адміністрування каталогу</h1>
+    <p>Ця сторінка є навчальною імітацією адміністративного інтерфейсу. Тут ви можете додавати та редагувати альбоми.</p>
+    <section>
+        <h2>Альбоми каталогу</h2>
+        <table>
+                    <caption>Таблиця альбомів</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Назва</th>
+                            <th scope="col">Жанр</th>
+                            <th scope="col">Виконавець</th>
+                            <th scope="col">Рік випуску</th>
+                            <th scope="col">Оригінальне видання</th>
+                            <th scope="col">Дії</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">The Dark Side of the Moon</th>
+                            <td>Рок</td>
+                            <td>Pink Floyd</td>
+                            <td><time datetime="1973">1973</time></td>
+                            <td>Так</td>
+                            <td><a href="admin-edit.html">Редагувати The Dark Side of the Moon</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">OK Computer</th>
+                            <td>Рок</td>
+                            <td>Radiohead</td>
+                            <td><time datetime="1997">1997</time></td>
+                            <td>Так</td>
+                            <td><a href="admin-edit.html">Редагувати OK Computer</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Random Access Memories</th>
+                            <td>Електроніка</td>
+                            <td>Daft Punk</td>
+                            <td><time datetime="2013">2013</time></td>
+                            <td>Так</td>
+                            <td><a href="admin-edit.html">Редагувати Random Access Memories</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mezzanine</th>
+                            <td>Електроніка</td>
+                            <td>Massive Attack</td>
+                            <td><time datetime="1998">1998</time></td>
+                            <td>Так</td>
+                            <td><a href="admin-edit.html">Редагувати Mezzanine</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">To Pimp a Butterfly</th>
+                            <td>Хіп-хоп</td>
+                            <td>Kendrick Lamar</td>
+                            <td><time datetime="2015">2015</time></td>
+                            <td>Ні</td>
+                            <td><a href="admin-edit.html">Редагувати To Pimp a Butterfly</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Kind of Blue</th>
+                            <td>Джаз</td>
+                            <td>Miles Davis</td>
+                            <td><time datetime="1959">1959</time></td>
+                            <td>Ні</td>
+                            <td><a href="admin-edit.html">Редагувати Kind of Blue</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+    </section>
+
+    <section>
+        <h2>Додавання нового альбому</h2>
+        <p>Щоб додати новий альбом до каталогу, заповніть форму нижче та натисніть кнопку "Додати".</p>
+        <form id="album-form" method="get">
+            <fieldset>
+                <legend>Основні дані</legend>
+            <label for="title">Назва альбому:</label>
+            <input type="text" id="title" name="title" required minlength="1" maxlength="100">
+
+            <label for="artist">Виконавець:</label>
+            <input type="text" id="artist" name="artist" required maxlength="80" list="artist-list">
+            <datalist id="artist-list">
+                <option value="Pink Floyd">
+                <option value="Radiohead">
+                <option value="Daft Punk">
+                <option value="Massive Attack">
+                <option value="Kendrick Lamar">
+                <option value="Miles Davis">
+            </datalist>
+
+            <label for="albumCode">Код альбому:</label>
+            <input type="text" id="albumCode" name="albumCode" required pattern="[A-Z]{3}-[0-9]{3}" aria-describedby="albumCode-help">
+            <div id="albumCode-help">
+                <small>Формат: ТРИ ВЕЛИКІ ЛАТИНСЬКІ ЛІТЕРИ-ТРИ ЦИФРИ (наприклад, ABC-123)</small>
+            </div>
+            
+            <label for="genre">Жанр:</label>
+            <select required id="genre" name="genre">
+                <option value="">Виберіть жанр</option>
+                <option value="rock">Рок</option>
+                <option value="electronic">Електроніка</option>
+                <option value="hip-hop">Хіп-хоп</option>
+                <option value="jazz">Джаз</option>
+            </select>
+
+            <label for="releaseYear">Рік випуску:</label>
+            <input type="number" id="releaseYear" name="releaseYear" min="1900" max="2026" step="1" required aria-describedby="releaseYear-help">
+            <div id="releaseYear-help">
+                <small>Введіть рік випуску (1900-2026)</small>
+            </div>
+
+            <label for="trackCount">Кількість треків:</label>
+            <input type="number" id="trackCount" name="trackCount" min="1" max="100" step="1" required>
+
+            <label for="keyTrack">Ключовий трек:</label>
+            <input type="text" id="keyTrack" name="keyTrack" maxlength="100">
+
+            <label for="addedAt">Дата додавання:</label>
+            <input type="date" id="addedAt" name="addedAt" min="2024-01-01" max="2027-12-31" aria-describedby="addedAt-help">
+            <div id="addedAt-help">
+                <small>Виберіть дату додавання (від 2024-01-01 до 2027-12-31)</small>
+            </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Обкладинка, опис і стан</legend>
+                <label for="coverFile">Обкладинка:</label>
+            <input type="file" id="coverFile" name="coverFile" accept=".jpg, .jpeg, .png, .webp, .avif" aria-describedby="coverFile-help">
+            <div id="coverFile-help">
+                <small>Дозволені формати: .jpg, .jpeg, .png, .webp, .avif</small>
+            </div>
+
+            <label for="description">Опис альбому:</label>
+            <textarea id="description" name="description" maxlength="500"></textarea>
+
+            <label for="isOriginal">Оригінальне видання:</label>
+            <input type="checkbox" id="isOriginal" name="isOriginal">
+            </fieldset>
+
+            <button type="submit">Додати</button>
+            <button type="reset">Очистити</button>
+        </form>
+    </section>
+    
+    </main>
+    <footer>
+        <section id="contact">
+            <h2>Контакти</h2>
+            <ul>
+            <li>Зв'яжіться з нами за адресою: example@email.com</li>
+            <li>Телефон: +380 123 456 789</li>
+            </ul>
+            <section id="messenger">
+            <h3>Месенджери:</h3>
+            <ul>
+            <li>Telegram (@example123 або по номеру телефону)</li>
+            <li>WhatsApp (+380 123 456 789)</li>
+            <li>Viber (+380 123 456 789)</li>
+            <li>Instagram (<a href="https://www.instagram.com/example123inst" target="_blank" rel="noopener noreferrer">example123inst</a>)</li>
+            <li>Facebook (<a href="https://www.facebook.com/example123fsb" target="_blank" rel="noopener noreferrer">example123fsb</a>)</li>
+            </ul>
+            </section>
+        </section>
+        <p>
+            <small>© 2026 Музичні альбоми. Сторінка сайту-каталогу.</small>
+        </p>
+    </footer>
+</body>
+</html>
